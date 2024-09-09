@@ -1,0 +1,832 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif; /* Применение шрифта League Spartan для латиницы */
+    background-color: #F1EFE7; /* Changed background color to beige */
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nal-logo {
+    max-width: 130px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #47659E; /* Changed text color to blue */
+}
+
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #47659E; /* Changed underline color to blue */
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+    width: 70%;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #A21100; /* Changed button background to red */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/*.btn:hover {
+    background-color: #47659E; Changed hover background to blue
+}*/
+
+.buk {
+    color: #47659E; /* Changed text color to blue */
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #F1EFE7;
+    z-index: -100;
+}
+
+header {
+    position: relative;
+    padding-top: 2rem;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content {
+    margin-bottom: 1rem;
+    color: #47659E; /* Changed text color to blue */
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Archive', sans-serif; /* Применение шрифта Archive для кириллицы */
+}
+
+header .content h1 {
+    color: #A21100; /* Changed heading color to red */
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+header .content h1 span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #A21100; /* Changed stroke color to red */
+}
+
+header .content p {
+    margin-bottom: 2rem;
+    color: #47659E; /* Changed text color to blue */
+}
+
+header .imaig {
+    position: relative;
+}
+
+header .imaig::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(90%);
+    font-size: 38rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: #47659E; /* Changed background character color to blue */
+    opacity: 0.2;
+    z-index: -100;
+}
+
+header .imaig img {
+    max-width: 600px;
+    margin: auto;
+}
+
+section .header {
+    font-size: 2rem;
+    font-family: 'Archive', sans-serif; /* Применение шрифта Archive для кириллицы */
+    color: #A21100; /* Changed text color to red */
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section .Sub-header {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #47659E; /* Changed text color to blue */
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    background-color: #F1EFE7; /* Changed background color to beige */
+    padding: 2rem 1rem;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #A21100; /* Changed heading color to red */
+}
+
+.card p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #47659E; /* Changed text color to blue */
+}
+
+.card a {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #A21100; /* Changed link color to red */
+    transition: all 0.3s ease;
+}
+
+.card a:hover {
+    color: #47659E; /* Changed hover color to blue */
+}
+
+.pricing {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.pricing .card {
+    background-color: #F1EFE7; /* Changed background color to beige */
+    padding: 2rem 1rem;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.pricing .card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #A21100; /* Changed heading color to red */
+}
+
+.pricing .card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #47659E; /* Changed price color to blue */
+}
+
+.pricing .card p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #47659E; /* Changed text color to blue */
+}
+
+.contact-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.contact-button .btn {
+    background-color: #A21100;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+/* 
+.contact-button .btn:hover {
+    background-color: #47659E;
+} */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing {
+        grid-template-columns: 1fr;
+    }
+}
+
+.footer {
+    background-color: #1d4ed8;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content p {
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ccc;
+}
+
+.transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #47659E;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.transition-overlay.show {
+    opacity: 1;
+}/* About Us Section */
+#about {
+    padding: 4rem 0;
+    background-color: #F1EFE7; /* Background color for about section */
+    color: #47659E; /* Text color for about section */
+}
+
+#about .header {
+    font-size: 2rem;
+    font-family: 'Archive', sans-serif; /* Font for headers */
+    color: #A21100; /* Header color changed to red */
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#about .sub-header {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #47659E; /* Text color to blue */
+}
+
+#about .about-content {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #47659E; /* Text color to blue */
+}
+
+#about .about-content p, #about .about-content ul {
+    margin-bottom: 1rem;
+}
+
+#about .about-content ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+#about .about-content li {
+    margin-bottom: 0.5rem;
+    color: #47659E; /* Text color to blue */
+}
+
+#about .about-content h3 {
+    color: #A21100; /* Subheader color to red */
+    margin-bottom: 1rem;
+    font-family: 'Archive', sans-serif; /* Font for subheaders */
+}
+
+/* General Styles */
+body {
+    font-family: 'Archive', sans-serif;
+    line-height: 1.6;
+    background-color: #F1EFE7; /* Background color changed to beige */
+    color: #47659E; /* General text color changed to blue */
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Archive', sans-serif; /* Font for headers */
+    color: #A21100; /* Header color changed to red */
+}
+
+/* About Us Section */
+#about {
+    padding: 4rem 0;
+    background-color: #F1EFE7; /* Background color for about section */
+    color: #47659E; /* Text color for about section */
+}
+
+#about .header {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#about .sub-header {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#about .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#about .text-content {
+    flex: 1;
+}
+
+#about .about-content {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #47659E; /* Text color to blue */
+}
+
+#about .about-content p, #about .about-content ul {
+    margin-bottom: 1rem;
+}
+
+#about .about-content ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+#about .about-content li {
+    margin-bottom: 0.5rem;
+    color: #47659E; /* Text color to blue */
+}
+
+#about .about-content h3 {
+    color: #A21100; /* Subheader color to red */
+    margin-bottom: 1rem;
+    font-family: 'Archive', sans-serif; /* Font for subheaders */
+}
+
+#about .imaig {
+    flex: 1;
+    max-width: 400px;
+}
+
+#about .imaig img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* General Styles */
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-color: #F1EFE7;
+    color: #47659E;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nal-logo {
+    max-width: 130px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link {
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #47659E;
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+    width: 70%;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #A21100;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #47659E;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #F1EFE7;
+    z-index: -100;
+}
+
+header {
+    position: relative;
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content {
+    color: #47659E;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Archive', sans-serif;
+}
+
+header .content h1 {
+    color: #A21100;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+header .content h1 span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #A21100;
+}
+
+header .content p {
+    margin-bottom: 2rem;
+}
+
+header .imaig img {
+    max-width: 600px;
+    margin: auto;
+}
+
+section .header {
+    font-size: 2rem;
+    font-family: 'Archive', sans-serif;
+    color: #A21100;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section .sub-header {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    background-color: #F1EFE7;
+    padding: 2rem 1rem;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #A21100;
+}
+
+.card p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.card a {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #A21100;
+    transition: all 0.3s ease;
+}
+
+.card a:hover {
+    color: #47659E;
+}
+
+/* .footer {
+    background-color: #47659E;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+} */
+.footer {
+    background-color: #47659E;
+    color: #fff;
+    /* padding: 2rem 1rem; */
+    text-align: center;
+    height: 225px; /* Добавлена высота для футера */
+    display: flex; /* Flexbox для центрирования контента */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer p {
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-links a {
+    font-size: 0.9rem;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #F1EFE7;
+}
+
+.contact-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.contact-button a {
+    display: inline-block;
+    background-color: #A21100;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-button a:hover {
+    background-color: #47659E;
+}
+
+/* Responsive Design */
+/* Tablet view (max-width: 992px) */
+@media (max-width: 992px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on tablet */
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-list li,
+    .about-list ul {
+        margin-left: 20px;
+        padding-left: 10px;
+    }
+}
+
+/* Mobile view (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .features {
+        grid-template-columns: 1fr; /* One column on mobile */
+    }
+
+    .about-list li,
+    .about-list ul {
+        margin-left: 20px;
+        padding-left: 10px;
+    }
+
+    .btn {
+        width: 100%; /* Make buttons full width */
+    }
+
+    /* Additional styling for mobile */
+    body {
+        padding: 0 10px; /* Add padding for mobile view */
+    }
+}
+/* Mobile view (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Header and navigation */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem; /* Stack links vertically */
+    }
+
+    /* Features section */
+    .features {
+        grid-template-columns: 1fr; /* One column layout */
+    }
+
+    /* Pricing section */
+    .pricing {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    /* General adjustments for about-list */
+    .about-list li,
+    .about-list ul {
+        margin-left: 20px;
+        padding-left: 10px;
+    }
+
+    /* Buttons */
+    .btn {
+        width: 100%; /* Make buttons full width for touch devices */
+        padding: 1rem 1.5rem; /* Adjust padding for better touch interaction */
+    }
+
+    /* Contact button (floating) */
+    .contact-button {
+        position: fixed;
+        bottom: 10px;
+        right: 10px; /* Adjust positioning */
+    }
+
+    /* Text adjustments */
+    h1, h2, h3, h4 {
+        font-size: 1.5rem; /* Adjust font size for better readability */
+    }
+
+    /* Additional mobile body padding */
+    body {
+        padding: 0 10px;
+    }
+
+    /* Footer section */
+    .footer {
+        padding: 1rem; /* Reduce padding in footer */
+    }
+}
